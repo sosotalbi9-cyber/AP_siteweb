@@ -1,0 +1,126 @@
+/* Page « Ligne de commande Linux » — à charger après Global.css */
+
+.memo {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.memo h1 {
+  color: #982323;
+  margin-bottom: 20px;
+}
+
+.memo table {
+  margin: 0;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.memo th {
+  background-color: #333;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.95rem;
+}
+
+.memo td {
+  border-bottom: 1px solid #eee;
+}
+
+.memo tr:nth-child(even) {
+  background-color: white;
+}
+
+.memo tbody tr:hover {
+  background-color: #fbf6f6;
+}
+
+/* Nom de la commande */
+code.cmd {
+  display: inline-block;
+  padding: 3px 10px;
+  background: #f7ecec;
+  color: #982323;
+  border-radius: 6px;
+  font-family: Consolas, "Courier New", monospace;
+  font-weight: bold;
+}
+
+/* Exemple : petit bloc de terminal */
+code.ex {
+  display: inline-block;
+  padding: 5px 12px;
+  background: #1c1b1f;
+  color: #8fe3a1;
+  border-radius: 6px;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.9rem;
+}
+
+code.ex::before {
+  content: "$ ";
+  color: #8a8a93;
+}
+
+/* Options courantes */
+ul.opts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.opts li {
+  margin: 3px 0;
+  font-size: 0.92rem;
+  color: #444;
+}
+
+ul.opts code {
+  display: inline-block;
+  min-width: 2.2em;
+  padding: 1px 7px;
+  margin-right: 4px;
+  background: #f1f1f1;
+  color: #982323;
+  border-radius: 4px;
+  font-family: Consolas, "Courier New", monospace;
+  font-weight: bold;
+  text-align: center;
+}
+
+.aucune {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+/* Mobile : chaque ligne s'empile */
+@media (max-width: 700px) {
+  .memo thead {
+    display: none;
+  }
+
+  .memo table,
+  .memo tbody,
+  .memo tr,
+  .memo td {
+    display: block;
+  }
+
+  .memo tr {
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .memo td {
+    border: none;
+    padding: 4px 0;
+  }
+
+  .memo td[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 2px;
+    font-size: 0.75rem;
+    color: #888;
+  }
+}

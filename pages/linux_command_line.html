@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Global.css">
+    <link rel="stylesheet" href="../css/linux_command_line.css">
+    <title>Commandes Linux - SISR</title>
+</head>
+<body>
+    <header>
+        <nav>
+        <div class="logo">Logo</div>
+        <div class="menu" id="menu">
+          <a href="../index.html">Accueil</a>
+          <a href="html.html">HTML</a>
+          <a href="css.html">CSS</a>
+          <a href="javascript.html">JavaScript</a>
+          <a href="php.html">PHP</a>
+          <a href="kotlin.html">Kotlin</a>
+          <a href="python.html">Python</a>
+          <a href="sql.html">SQL</a>
+          <a href="angular.html">Angular</a>
+          <a href="git.html">Git</a>
+          <a href="github.html">GitHub</a>
+          <a href="linux.html">Linux</a>
+          <a href="linux_command_line.html">Ligne de commande Linux</a>
+        </div>
+        <div
+          class="burger"
+          id="burger"
+          aria-label="Menu"
+          aria-expanded="false"
+          role="button"
+          tabindex="0"
+        >
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="memo">
+        <h1>Mémento des commandes Linux</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Commande</th>
+                    <th>Description</th>
+                    <th>Options courantes</th>
+                    <th>Exemple d'utilisation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code class="cmd">ls</code></td>
+                    <td data-label="Description">Liste les fichiers et dossiers</td>
+                    <td data-label="Options courantes"><ul class="opts"><li><code>-l</code> affichage détaillé</li><li><code>-a</code> montre les fichiers cachés</li><li><code>-h</code> tailles lisibles (avec -l)</li></ul></td>
+                    <td data-label="Exemple d'utilisation"><code class="ex">ls -l</code></td>
+                </tr>
+                <tr>
+                    <td><code class="cmd">cd</code></td>
+                    <td data-label="Description">Change de répertoire</td>
+                    <td data-label="Options courantes"><ul class="opts"><li><code>..</code> dossier parent</li><li><code>~</code> dossier personnel</li><li><code>-</code> dossier précédent</li></ul></td>
+                    <td data-label="Exemple d'utilisation"><code class="ex">cd /home/user</code></td>
+                </tr>
+                <tr>
+                    <td><code class="cmd">pwd</code></td>
+                    <td data-label="Description">Affiche le répertoire dans lequel on se trouve</td>
+                    <td data-label="Options courantes"><ul class="opts"><li><code>-P</code> chemin réel, sans lien symbolique</li></ul></td>
+                    <td data-label="Exemple d'utilisation"><code class="ex">pwd</code></td>
+                </tr>
+                <tr>
+                    <td><code class="cmd">mkdir</code></td>
+                    <td data-label="Description">Crée un nouveau répertoire</td>
+                    <td data-label="Options courantes"><ul class="opts"><li><code>-p</code> crée aussi les dossiers parents</li><li><code>-v</code> affiche ce qui est créé</li></ul></td>
+                    <td data-label="Exemple d'utilisation"><code class="ex">mkdir exemple</code></td>
+                </tr>
+                <tr>
+                    <td><code class="cmd">touch</code></td>
+                    <td data-label="Description">Crée un fichier vide</td>
+                    <td data-label="Options courantes"><ul class="opts"><li><code>-c</code> ne crée pas le fichier s'il existe pas</li></ul></td>
+                    <td data-label="Exemple d'utilisation"><code class="ex">touch readme.md</code></td>
+                </tr>
+                <tr>
+                    <td><code class="cmd">cp</code></td>
+                    <td data-label="Description">Copie un fichier ou un répertoire</td>
+                    <td data-label="Options courantes"><ul class="opts"><li><code>-r</code> copie un dossier et son contenu</li><li><code>-i</code> demande avant d&#x27;écraser</li><li><code>-v</code> affiche les fichiers copiés</li></ul></td>
+                    <td data-label="Exemple d'utilisation"><code class="ex">cp exemple1.txt exemple2.txt</code></td>
+                </tr>
+                <tr>
+                    <td><code class="cmd">mv</code></td>
+                    <td data-label="Description">Déplace ou renomme un fichier</td>
+                    <td data-label="Options courantes"><ul class="opts"><li><code>-i</code> demande avant d&#x27;écraser</li><li><code>-n</code> n&#x27;écrase jamais</li><li><code>-v</code> affiche ce qui est déplacé</li></ul></td>
+                    <td data-label="Exemple d'utilisation"><code class="ex">mv ancien.txt nouveau.txt</code></td>
+                </tr>
+                <tr>
+                    <td><code class="cmd">rm</code></td>
+                    <td data-label="Description">Supprime un fichier</td>
+                    <td data-label="Options courantes"><ul class="opts"><li><code>-r</code> supprime un dossier et son contenu</li><li><code>-i</code> demande confirmation</li><li><code>-f</code> force, sans rien demander</li></ul></td>
+                    <td data-label="Exemple d'utilisation"><code class="ex">rm fichier.txt</code></td>
+                </tr>
+                <tr>
+                    <td><code class="cmd">rmdir</code></td>
+                    <td data-label="Description">Supprime un répertoire vide</td>
+                    <td data-label="Options courantes"><ul class="opts"><li><code>-p</code> supprime aussi les parents vides</li><li><code>-v</code> affiche ce qui est supprimé</li></ul></td>
+                    <td data-label="Exemple d'utilisation"><code class="ex">rmdir exemple</code></td>
+                </tr>
+                <tr>
+                    <td><code class="cmd">cat</code></td>
+                    <td data-label="Description">Affiche le contenu d&#x27;un fichier</td>
+                    <td data-label="Options courantes"><ul class="opts"><li><code>-n</code> numérote les lignes</li></ul></td>
+                    <td data-label="Exemple d'utilisation"><code class="ex">cat fichier.txt</code></td>
+                </tr>
+                <tr>
+                    <td><code class="cmd">echo</code></td>
+                    <td data-label="Description">Affiche un texte</td>
+                    <td data-label="Options courantes"><ul class="opts"><li><code>-e</code> interprète les \n (retour à la ligne)</li><li><code>-n</code> pas de retour à la ligne final</li></ul></td>
+                    <td data-label="Exemple d'utilisation"><code class="ex">echo &quot;Bonjour&quot;</code></td>
+                </tr>
+                <tr>
+                    <td><code class="cmd">nano</code></td>
+                    <td data-label="Description">Modifie un fichier dans le terminal</td>
+                    <td data-label="Options courantes"><ul class="opts"><li><code>Ctrl+O</code> enregistre</li><li><code>Ctrl+X</code> quitte</li></ul></td>
+                    <td data-label="Exemple d'utilisation"><code class="ex">nano fichier.txt</code></td>
+                </tr>
+                <tr>
+                    <td><code class="cmd">clear</code></td>
+                    <td data-label="Description">Efface l&#x27;écran du terminal</td>
+                    <td data-label="Options courantes"><ul class="opts"><li><code>Ctrl+L</code> même effet, au clavier</li></ul></td>
+                    <td data-label="Exemple d'utilisation"><code class="ex">clear</code></td>
+                </tr>
+                <tr>
+                    <td><code class="cmd">whoami</code></td>
+                    <td data-label="Description">Affiche le nom de l&#x27;utilisateur connecté</td>
+                    <td data-label="Options courantes"><span class="aucune">Aucune option courante</span></td>
+                    <td data-label="Exemple d'utilisation"><code class="ex">whoami</code></td>
+                </tr>
+                <tr>
+                    <td><code class="cmd">sudo</code></td>
+                    <td data-label="Description">Exécute une commande en administrateur</td>
+                    <td data-label="Options courantes"><ul class="opts"><li><code>-i</code> ouvre un terminal administrateur</li><li><code>-u</code> exécute en tant qu&#x27;un autre utilisateur</li></ul></td>
+                    <td data-label="Exemple d'utilisation"><code class="ex">sudo apt update</code></td>
+                </tr>
+                <tr>
+                    <td><code class="cmd">chmod</code></td>
+                    <td data-label="Description">Modifie les permissions d&#x27;un fichier ou répertoire</td>
+                    <td data-label="Options courantes"><ul class="opts"><li><code>-R</code> applique aussi au contenu du dossier</li><li><code>+x</code> rend le fichier exécutable</li><li><code>-w</code> retire le droit d&#x27;écriture</li></ul></td>
+                    <td data-label="Exemple d'utilisation"><code class="ex">chmod 755 script.sh</code></td>
+                </tr>
+                <tr>
+                    <td><code class="cmd">chown</code></td>
+                    <td data-label="Description">Change le propriétaire et le groupe</td>
+                    <td data-label="Options courantes"><ul class="opts"><li><code>-R</code> applique aussi au contenu du dossier</li><li><code>-v</code> affiche les changements</li></ul></td>
+                    <td data-label="Exemple d'utilisation"><code class="ex">chown root:root fichier.txt</code></td>
+                </tr>
+                <tr>
+                    <td><code class="cmd">ip</code></td>
+                    <td data-label="Description">Affiche ou manipule le routage, les interfaces et les sous-réseaux</td>
+                    <td data-label="Options courantes"><ul class="opts"><li><code>a</code> adresses IP</li><li><code>r</code> table de routage</li><li><code>link</code> interfaces réseau</li><li><code>-br</code> affichage court</li></ul></td>
+                    <td data-label="Exemple d'utilisation"><code class="ex">ip a</code></td>
+                </tr>
+                <tr>
+                    <td><code class="cmd">ping</code></td>
+                    <td data-label="Description">Teste la connexion avec une machine</td>
+                    <td data-label="Options courantes"><ul class="opts"><li><code>-c</code> nombre de paquets à envoyer</li><li><code>-i</code> délai entre deux paquets (en secondes)</li></ul></td>
+                    <td data-label="Exemple d'utilisation"><code class="ex">ping -c 4 8.8.8.8</code></td>
+                </tr>
+                <tr>
+                    <td><code class="cmd">man</code></td>
+                    <td data-label="Description">Affiche le manuel d&#x27;une commande</td>
+                    <td data-label="Options courantes"><ul class="opts"><li><code>-k</code> cherche par mot-clé</li><li><code>q</code> quitte le manuel</li></ul></td>
+                    <td data-label="Exemple d'utilisation"><code class="ex">man ls</code></td>
+                </tr>
+                <tr>
+                    <td><code class="cmd">history</code></td>
+                    <td data-label="Description">Affiche les dernières commandes tapées</td>
+                    <td data-label="Options courantes"><ul class="opts"><li><code>10</code> affiche les 10 dernières</li><li><code>-c</code> efface l&#x27;historique</li></ul></td>
+                    <td data-label="Exemple d'utilisation"><code class="ex">history</code></td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 COURS SIO WEB LDV Melun. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Menu burger
+        const burger = document.getElementById("burger");
+        const menu = document.getElementById("menu");
+        function basculerMenu() {
+            const ouvert = menu.classList.toggle("show");
+            burger.setAttribute("aria-expanded", ouvert);
+        }
+        burger.addEventListener("click", basculerMenu);
+        burger.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                basculerMenu();
+            }
+        });
+    </script>
+</body>
+</html>

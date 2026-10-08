@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/Global.css" />
+    <title>COURS SIO WEB | CSS</title>
+  </head>
+  <body>
+    <!--
+      Le header (<header>) est la section d'en-tête de la page.
+      Il contient généralement le titre principal, le logo, et la navigation principale du site.
+      Ici, il accueille le titre "Bienvenue sur le site de cours" et le menu de navigation.
+    -->
+    <header>
+      <!--
+        La balise <nav> est utilisée pour définir une section de navigation dans le document.
+        Elle contient des liens vers les différentes sections du site.
+        Ici, elle inclut un logo, un menu de navigation et un menu burger pour les écrans plus petits.-->
+      <nav>
+        <!--
+          La div avec la classe "logo" représente le logo du site.
+          Elle peut contenir une image ou du texte qui sert d'identité visuelle pour le site.
+          class :
+          En CSS, une classe est un sélecteur qui permet d'appliquer des styles à un ou plusieurs éléments HTML portant une même classe. La classe est définie dans le CSS avec un point (.) suivi du nom de la classe.
+          id :
+          Un identifiant (id) est un sélecteur unique qui permet de cibler un élément HTML spécifique. Contrairement à une classe, un id doit être unique dans le document et est défini dans le CSS avec un dièse (#) suivi du nom de l'id.
+          -->
+        <div class="logo">Logo</div>
+        <div class="menu" id="menu">
+          <a href="../index.html">Accueil</a>
+          <a href="html.html">HTML</a>
+          <a href="css.html">CSS</a>
+          <a href="javascript.html">JavaScript</a>
+          <a href="php.html">PHP</a>
+          <a href="kotlin.html">Kotlin</a>
+          <a href="python.html">Python</a>
+          <a href="sql.html">SQL</a>
+          <a href="angular.html">Angular</a>
+          <a href="git.html">Git</a>
+          <a href="github.html">GitHub</a>
+          <a href="linux.html">Linux</a>
+          <a href="linux_command_line.html">Ligne de commande Linux</a>
+        </div>
+
+        <!--
+          La div avec la classe "burger" représente le menu burger, qui est un élément de navigation compact pour les écrans plus petits.
+
+          arial-label="Menu" :
+          Attribut utilisé pour fournir une description accessible du menu burger aux technologies d'assistance, comme les lecteurs d'écran.
+
+          aria-expanded="false" : Indique si le menu burger est actuellement ouvert ou fermé.
+          role="button" : Indique que cet élément agit comme un bouton interactif.
+          tabindex="0" : Permet à l'élément d'être focalisé par le clavier, rendant le menu accessible aux utilisateurs de claviers.
+          Ces attributs améliorent l'accessibilité du menu burger pour les utilisateurs de technologies d'assistance.
+          -->
+        <div
+          class="burger"
+          id="burger"
+          aria-label="Menu"
+          aria-expanded="false"
+          role="button"
+          tabindex="0"
+        >
+          <!--
+            Les <div> à l'intérieur de la classe "burger" représentent les trois barres du menu burger.
+            Elles sont stylisées pour ressembler à un hamburger.-->
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </nav>
+    </header>
+    <h1>Introduction à CSS</h1>
+    <p>
+      CSS (Cascading Style Sheets) est un langage de style utilisé pour décrire
+      la présentation d'un document HTML. Il permet de contrôler l'apparence
+      visuelle des éléments d'une page web, tels que les couleurs, les polices,
+      les marges et les dispositions.
+    </p>
+    <p>
+      CSS a été développé par le W3C (World Wide Web Consortium) et a été publié
+      pour la première fois en 1996. Depuis lors, il a évolué pour inclure de
+      nombreuses fonctionnalités avancées, telles que les animations, les
+      transitions et les grilles.
+    </p>
+    <p>
+      L'utilisation de CSS permet de séparer le contenu d'une page web de sa
+      présentation, ce qui facilite la maintenance et la mise à jour des styles.
+      De plus, CSS permet d'appliquer des styles de manière cohérente sur
+      l'ensemble d'un site web.
+    </p>
+  </body>
+</html>
